@@ -20,6 +20,11 @@ const registerUser = async (userData) => {
     return await newUser.save();
 };
 
+const checkPassword = async (email, password)=> {
+    const User = await findUserByEmail(email)
+    
+}
+
 module.exports = {
     ensureUserCollection,
     findUserByEmail,

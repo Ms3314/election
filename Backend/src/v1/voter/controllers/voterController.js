@@ -29,7 +29,7 @@ const addVoter = async (req, res, next) => {
         if (!validateDate(voterData.dateOfPoll)) {
             return res.status(400).json({ message: "Invalid date format. Date format must be YYYY-MM-DD." });
         }
-
+        
         // Add voter using repository
         const newVoter = await voterRepository.addVoter(voterData);
 
