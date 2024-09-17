@@ -26,15 +26,43 @@ const registerUser = async (req, res, next) => {
 
 const loginUser = async (req , res , next) => {
     const { email , password } = req.body;
-    const existingUser = await userRepository.findUserByEmail(email);
-        if (existingUser) {
-            // we need to store the data 
-            // first we have to hash the password 
-            res.send(hashedPassword)
-        }
+    // make the user login part here 
+    // the data base part is made in the userRepository 
+    // do it liek the register one 
+    
 
 }
 
 module.exports = {
-    registerUser
+    registerUser , 
+    loginUser
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const CheckexistingUser = await userRepository.loginUser(email , password);
+//     if (CheckexistingUser == true) {
+//         res.status(200).send("the password is correct , user is logged in ")
+//     } else res.status(400).send("Invalid credentials")

@@ -20,13 +20,26 @@ const registerUser = async (userData) => {
     return await newUser.save();
 };
 
-const checkPassword = async (email, password)=> {
-    const User = await findUserByEmail(email)
-    
-}
 
 module.exports = {
     ensureUserCollection,
     findUserByEmail,
-    registerUser
+    registerUser,
+    
 };
+
+
+// const loginUser = async (email, password)=> {
+//     try {
+//         const existingUser = await userRepository.findUserByEmail(email);
+//             if (existingUser) {
+//                 bcrypt.compare(password, existingUser.password , async function(err, result) {
+//                     return result
+//                 });
+//             }
+     
+//     } catch (error) {
+        
+
+//     }
+// }
